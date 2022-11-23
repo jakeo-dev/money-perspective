@@ -2,164 +2,109 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>Celebrities' Point of View of Prices</title>
-    <link href="style.css" rel="stylesheet">
+    <meta charset='utf-8'>
+    <title>Celebrity Perspective</title>
+    <link href='style.css' rel='stylesheet'>
 </head>
 
 <body>
 
-    <h1 id="title">Celebrities' Point of View of Prices</h1>
+    <h1 id='title'>Celebrity Perspective</h1>
 
-    <div id="top">
-        <div id="meDiv">
-            <input type="number" placeholder="My Salary" id="mySalary">
+    <div id='top'>
+        <div id='meDiv'>
+            <input type='number' placeholder='My Salary' id='mySalary'>
         </div>
 
-        <div id="celebDiv">
-            <select id="selectCeleb" onchange="changeCeleb();">
-                <optgroup label="Select a Celebrity">
-                    <option value="25000000">Ariana Grande</option>
-                    <option value="4000000000">Bill Gates</option>
-                    <option value="53000000">Billie Eilish</option>
-                    <option value="64500000">Chris Hemsworth</option>
-                    <option value="105000000">Cristiano Ronaldo</option>
-                    <option value="60000000">Denzel Washington</option>
-                    <option value="49000000">Drake</option>
-                    <option value="27000000">Dwayne Johnson</option>
-                    <option value="84000000">Ellen DeGeneres</option>
-                    <option value="2400000000">Elon Musk</option>
-                    <option value="81000000">Elton John</option>
-                    <option value="239000000">George Clooney</option>
-                    <option value="70000000">Gordon Ramsay</option>
-                    <option value="90000000">Howard Stern</option>
-                    <option value="20000000">Jennifer Aniston</option>
-                    <option value="36000000">Jennifer Lopez</option>
-                    <option value="60000000">J.K. Rowling</option>
-                    <option value="80000000">Kate Hudson</option>
-                    <option value="170000000">Kanye West</option>
-                    <option value="7500000">Lin-Manuel Miranda</option>
-                    <option value="190000000">Oprah Winfrey</option>
-                    <option value="60000000">Post Malone</option>
-                    <option value="20000000">Reese Witherspoon</option>
-                    <option value="81000000">Robert Downey Jr.</option>
-                    <option value="25000000">Ryan Reynolds</option>
-                    <option value="60000000">Ryan Seacrest</option>
-                    <option value="51000000">Simon Cowell</option>
-                    <option value="63000000">Taylor Swift</option>
-                    <option value="35000000">Tom Hanks</option>
-                    <option value="44500000">Will Smith</option>
+        <div id='celebDiv'>
+            <select id='selectCeleb' onchange='changeCeleb();'>
+                <optgroup label='Select a Celebrity'>
+                    <option value='15000'>Min Wage American</option>
+                    <option value='55000'>Avg Wage American</option>
+                    <option value='25000000'>Ariana Grande</option>
+                    <option value='4000000000'>Bill Gates</option>
+                    <option value='53000000'>Billie Eilish</option>
+                    <option value='64500000'>Chris Hemsworth</option>
+                    <option value='105000000'>Cristiano Ronaldo</option>
+                    <option value='60000000'>Denzel Washington</option>
+                    <option value='600000000'>Donald Trump</option>
+                    <option value='49000000'>Drake</option>
+                    <option value='27000000'>Dwayne Johnson</option>
+                    <option value='84000000'>Ellen DeGeneres</option>
+                    <option value='2400000000'>Elon Musk</option>
+                    <option value='81000000'>Elton John</option>
+                    <option value='239000000'>George Clooney</option>
+                    <option value='70000000'>Gordon Ramsay</option>
+                    <option value='90000000'>Howard Stern</option>
+                    <option value='20000000'>Jennifer Aniston</option>
+                    <option value='36000000'>Jennifer Lopez</option>
+                    <option value='60000000'>J.K. Rowling</option>
+                    <option value='80000000'>Kate Hudson</option>
+                    <option value='170000000'>Kanye West</option>
+                    <option value='7500000'>Lin-Manuel Miranda</option>
+                    <option value='190000000'>Oprah Winfrey</option>
+                    <option value='60000000'>Post Malone</option>
+                    <option value='20000000'>Reese Witherspoon</option>
+                    <option value='81000000'>Robert Downey Jr.</option>
+                    <option value='25000000'>Ryan Reynolds</option>
+                    <option value='60000000'>Ryan Seacrest</option>
+                    <option value='51000000'>Simon Cowell</option>
+                    <option value='63000000'>Taylor Swift</option>
+                    <option value='3000000'>Tim Cook</option>
+                    <option value='35000000'>Tom Hanks</option>
+                    <option value='44500000'>Will Smith</option>
                 </optgroup>
             </select>
-            <input type="number" placeholder="Celebrity's Salary" id="celebSalary" value="25000000">
+            <input type='number' placeholder='Celebrity' s Salary' id='celebSalary' value='15000'>
         </div>
 
-        <div id="productDiv">
-            <select id="selectProduct" onchange="changeProduct();">
-                <optgroup label="Select a Product">
-                    <option value="20">Flashlight</option>
-                    <option value="35">Pet Carrier</option>
-                    <option value="45">Backpack</option>
-                    <option value="66">Printer Ink Cartridge</option>
-                    <option value="150">Wireless Earbuds</option>
-                    <option value="200">Bicycle</option>
-                    <option value="250">Smartwatch</option>
-                    <option value="380">Lawn Mower</option>
-                    <option value="450">Professional Camera</option>
-                    <option value="500">Play Station</option>
-                    <option value="700">Laptop</option>
-                    <option value="1000">Smartphone</option>
-                    <option value="2000">TV</option>
-                    <option value="7000">Rolex</option>
-                    <option value="10000">Swimming Pool</option>
-                    <option value="15000">Black Card</option>
-                    <option value="100000">Large Donation</option>
-                    <option value="500000">Dinosaur Skull Fossil</option>
-                    <option value="650000">Yacht</option>
-                    <option value="800000">Mansion</option>
-                    <option value="2500000">Sports Car</option>
-                    <option value="5000000">Private Jet</option>
-                    <option value="10000000">Private Island</option>
-                    <option value="450000000">The Last Supper</option>
+        <div id='productDiv'>
+            <select id='selectProduct' onchange='changeProduct();'>
+                <optgroup label='Select a Product'>
+                    <option value='20'>Flashlight</option>
+                    <option value='35'>Pet Carrier</option>
+                    <option value='45'>Backpack</option>
+                    <option value='66'>Printer Ink Cartridge</option>
+                    <option value='150'>Wireless Earbuds</option>
+                    <option value='200'>Bicycle</option>
+                    <option value='250'>Smartwatch</option>
+                    <option value='380'>Lawn Mower</option>
+                    <option value='450'>Professional Camera</option>
+                    <option value='500'>Play Station</option>
+                    <option value='700'>Laptop</option>
+                    <option value='1000'>Smartphone</option>
+                    <option value='2000'>TV</option>
+                    <option value='7000'>Rolex</option>
+                    <option value='10000'>Swimming Pool</option>
+                    <option value='15000'>Black Card</option>
+                    <option value='100000'>Large Donation</option>
+                    <option value='500000'>Dinosaur Skull Fossil</option>
+                    <option value='650000'>Yacht</option>
+                    <option value='800000'>Mansion</option>
+                    <option value='2500000'>Sports Car</option>
+                    <option value='5000000'>Private Jet</option>
+                    <option value='10000000'>Private Island</option>
+                    <option value='450000000'>The Last Supper</option>
                 </optgroup>
             </select>
-            <input type="number" placeholder="Price of Product" id="itemPrice" value="20">
+            <input type='number' placeholder='Price of Product' id='itemPrice' value='20'>
         </div>
 
-        <div id="calcDiv">
-            <button id="calc" onclick="calc();">Calculate</button>
+        <div id='calcDiv'>
+            <button id='calc' onclick='calc();'>Calculate</button>
         </div>
 
     </div>
 
-    <h2 id="finalPrice"></h2>
+    <h2 id='finalPrice'></h2>
 
-    <!-- <div id="imageDiv">
-        <img id="celeb" src="elon-musk.png" width="300" height="300">
-        <img id="product" src="iphone.png" width="300" height="300">
+    <!-- <div id='imageDiv'>
+        <img id='celeb' src='elon-musk.png' width='300' height='300'>
+        <img id='product' src='iphone.png' width='300' height='300'>
     </div> -->
-
-    <div id="footer">
-        <button onclick="home()" class="fButton" id="home">Jorch.xyz</button>
-        <button onclick="tweet()" class="fButton" id="tweet">Tweet</button>
-    </div>
 
 </body>
 
-<script>
-
-    let sc = document.getElementById("selectCeleb");
-    let sp = document.getElementById("selectProduct");
-
-    var formatter = new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: "USD",
-    });
-
-    function changeCeleb() {
-        //let selectedCeleb = sc.options[sc.selectedIndex].value;
-        document.getElementById("celebSalary").value = sc.value;
-    }
-
-    function changeProduct() {
-        //let selectedProduct = sp.options[sp.selectedIndex].value;
-        document.getElementById("itemPrice").value = sp.value;
-
-        /* if (sp.value == "1000") {
-            document.getElementById("product").src = "iphone.png";
-        } */
-    }
-
-    function calc() {
-        let m = document.getElementById("mySalary").value;
-        let c = document.getElementById("celebSalary").value;
-        let a = document.getElementById("itemPrice").value;
-
-        if (m <= 0 || m == null) {
-            alert("I know you're poor but you need to enter a salary above zero.");
-        } else if (c <= 0 || c == null) {
-            alert("A celebrity can't make less than zero dollars. Enter a celebrity's salary above zero.");
-        } else if (a <= 0 || a == null) {
-            alert("Nothing is free. Enter a price above zero.");
-        } else {
-
-            let price = formatter.format(a * (1 / (c / m)));
-
-            let celebName = selectCeleb.options[selectCeleb.selectedIndex].text;
-            let productName = selectProduct.options[selectProduct.selectedIndex].text;
-
-            document.getElementById("finalPrice").innerText = `${celebName} purchasing a ${productName.toLowerCase()} is equivalent to you spending ${price}`;
-        }
-    }
-
-    function home() {
-        window.open("https://jorch.xyz", "_blank");
-    }
-
-    function tweet() {
-        window.open("https://twitter.com/intent/tweet?url=https%3A%2F%2Fprices.jorch.xyz%2F&via=jakeybakers0808&text=prices%20from%20celebrities%27%20point%20of%20view", "_blank");
-    }
-
-</script>
-
 </html>
+
+<script src='script.js'></script>

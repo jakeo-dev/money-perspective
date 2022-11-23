@@ -149,15 +149,6 @@ button:hover {
   align-items: center;
 }
 
-.fButton {
-  margin-left: 5px;
-}
-
-#footer {
-  position: absolute;
-  bottom: 10px;
-}
-
 @font-face {
   font-family: lexend;
   src: url("LexendDeca-Regular.ttf");
