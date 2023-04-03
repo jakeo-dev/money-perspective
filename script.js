@@ -1,5 +1,5 @@
-let sc = document.getElementById('selectCeleb');
-let sp = document.getElementById('selectProduct');
+let sc = document.querySelector('#selectCeleb');
+let sp = document.querySelector('#selectProduct');
 
 var formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -7,30 +7,33 @@ var formatter = new Intl.NumberFormat('en-US', {
 });
 
 function changeCeleb() {
-    //let selectedCeleb = sc.options[sc.selectedIndex].value;
-    document.getElementById('celebSalary').value = sc.value;
+    document.querySelector('#celebSalary').value = sc.value;
+    if (sc.value !== '') {
+        document.querySelector('#celebSalary').disabled = true;
+    } else {
+        document.querySelector('#celebSalary').disabled = false;
+    }
 }
 
 function changeProduct() {
-    //let selectedProduct = sp.options[sp.selectedIndex].value;
-    document.getElementById('itemPrice').value = sp.value;
+    document.querySelector('#itemPrice').value = sp.value;
 
-    /* if (sp.value == '1000') {
-        document.getElementById('product').src = 'iphone.png';
-    } */
+    if (sp.value !== '') {
+        document.querySelector('#itemPrice').disabled = true;
+    } else {
+        document.querySelector('#itemPrice').disabled = false;
+    }
 }
 
 function calc() {
-    let m = document.getElementById('mySalary').value;
-    let c = document.getElementById('celebSalary').value;
-    let a = document.getElementById('itemPrice').value;
+    let m = document.querySelector('#mySalary').value;
+    let c = document.querySelector('#celebSalary').value;
+    let a = document.querySelector('#itemPrice').value;
 
-    if (m <= 0 || m == null) {
+    if ((m <= 0 || m == null) || (c <= 0 || c == null)) {
         alert('Enter a salary above zero.');
-    } else if (c <= 0 || c == null) {
-        alert("Enter a celebrity's salary above zero.");
     } else if (a <= 0 || a == null) {
-        alert('Nothing is free. Enter a price above zero.');
+        alert('Enter a price above zero.');
     } else {
 
         let price = formatter.format(a * (1 / (c / m)));
@@ -38,6 +41,6 @@ function calc() {
         let celebName = selectCeleb.options[selectCeleb.selectedIndex].text;
         let productName = selectProduct.options[selectProduct.selectedIndex].text;
 
-        document.getElementById('finalPrice').innerText = `${celebName} purchasing a ${productName.toLowerCase()} is equivalent to you spending ${price}`;
+        document.querySelector('#finalPrice').innerText = `${celebName} buying a ${productName.toLowerCase()} is equivalent to you spending ${price}`;
     }
 }

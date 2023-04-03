@@ -2,28 +2,48 @@
 <html>
 
 <head>
-    <meta charset='utf-8'>
-    <title>Celebrity Perspective</title>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>The Perspective of Money</title>
     <link href='style.css' rel='stylesheet'>
+    <link rel='preconnect' href='https://fonts.googleapis.com'>
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+    <link
+        href='https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap'
+        rel='stylesheet'>
 </head>
 
-<body>
+<body class='font-LexendDeca p-8 pt-12 pb-16 md:p-16'>
 
-    <h1 id='title'>Celebrity Perspective</h1>
+    <h1
+        class='text-transparent bg-clip-text bg-gradient-to-r from-lime-700 to-teal-700 text-3xl md:text-4xl font-semibold flex justify-center items-center text-center'>
+        The Perspective of Money
+    </h1>
 
-    <div id='top'>
-        <div id='meDiv'>
-            <input type='number' placeholder='My Salary' id='mySalary'>
+    <div class='justify-center items-center text-center mt-8 md:mt-14'>
+
+        <div class='flex justify-center items-center'>
+            <p class='text-xl flex justify-center items-center mr-1'>$</p>
+            <input type='number' placeholder='My salary' id='mySalary' class='input focus:bg-gray-200 text-center'
+                min='0'>
         </div>
 
-        <div id='celebDiv'>
-            <select id='selectCeleb' onchange='changeCeleb();'>
-                <optgroup label='Select a Celebrity'>
+        <h2 class='md:text-lg flex justify-center items-center text-center mt-4'>
+            compared to...
+        </h2>
+
+        <div class='grid grid-cols-2 gap-4 my-4 xl:px-80 lg:px-52'>
+            <select id='selectCeleb' class='input text-right' onchange='changeCeleb()'>
+                <option value=''>Custom</option>
+                <optgroup label='Wages'>
                     <option value='15000'>Min Wage American</option>
-                    <option value='55000'>Avg Wage American</option>
+                    <option value='98000'>Avg Wage American</option>
+                    <option value='70000'>Median Wage American</option>
+                </optgroup>
+                <optgroup label='Celebrities'>
                     <option value='25000000'>Ariana Grande</option>
                     <option value='4000000000'>Bill Gates</option>
-                    <option value='53000000'>Billie Eilish</option>
+                    <option value='75000000'>Billie Eilish</option>
                     <option value='64500000'>Chris Hemsworth</option>
                     <option value='105000000'>Cristiano Ronaldo</option>
                     <option value='60000000'>Denzel Washington</option>
@@ -55,11 +75,20 @@
                     <option value='44500000'>Will Smith</option>
                 </optgroup>
             </select>
-            <input type='number' placeholder='Celebrity' s Salary' id='celebSalary' value='15000'>
+            <div class='flex'>
+                <p class='text-xl flex justify-center items-center mr-1'>$</p>
+                <input type='number' placeholder="Someone else's salary" id='celebSalary'
+                    class='input w-full focus:bg-gray-200' min='0'>
+            </div>
         </div>
 
-        <div id='productDiv'>
-            <select id='selectProduct' onchange='changeProduct();'>
+        <h2 class='md:text-lg flex justify-center items-center text-center mt-4'>
+            buying...
+        </h2>
+
+        <div class='grid grid-cols-2 gap-4 my-4 xl:px-80 lg:px-52'>
+            <select id='selectProduct' class='input text-right' onchange='changeProduct()'>
+                <option value=''>Custom</option>
                 <optgroup label='Select a Product'>
                     <option value='20'>Flashlight</option>
                     <option value='35'>Pet Carrier</option>
@@ -71,14 +100,13 @@
                     <option value='380'>Lawn Mower</option>
                     <option value='450'>Professional Camera</option>
                     <option value='500'>Play Station</option>
-                    <option value='700'>Laptop</option>
+                    <option value='800'>Laptop</option>
                     <option value='1000'>Smartphone</option>
                     <option value='2000'>TV</option>
                     <option value='7000'>Rolex</option>
                     <option value='10000'>Swimming Pool</option>
-                    <option value='15000'>Black Card</option>
                     <option value='100000'>Large Donation</option>
-                    <option value='500000'>Dinosaur Skull Fossil</option>
+                    <option value='500000'>Fossilized Dinosaur Skull</option>
                     <option value='650000'>Yacht</option>
                     <option value='800000'>Mansion</option>
                     <option value='2500000'>Sports Car</option>
@@ -87,21 +115,18 @@
                     <option value='450000000'>The Last Supper</option>
                 </optgroup>
             </select>
-            <input type='number' placeholder='Price of Product' id='itemPrice' value='20'>
+            <div class='flex'>
+                <p class='text-xl flex justify-center items-center mr-1'>$</p>
+                <input type='number' placeholder='Price of product' id='itemPrice'
+                    class='input w-full focus:bg-gray-200' min='0'>
+            </div>
         </div>
 
-        <div id='calcDiv'>
-            <button id='calc' onclick='calc();'>Calculate</button>
-        </div>
+        <button id='calc' onclick='calc()' class='input'>Calculate</button>
 
     </div>
 
-    <h2 id='finalPrice'></h2>
-
-    <!-- <div id='imageDiv'>
-        <img id='celeb' src='elon-musk.png' width='300' height='300'>
-        <img id='product' src='iphone.png' width='300' height='300'>
-    </div> -->
+    <h2 id='finalPrice' class='text-xl flex justify-center items-center text-center mt-8'></h2>
 
 </body>
 
