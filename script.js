@@ -36,11 +36,26 @@ function calc() {
         alert('Enter a price above zero.');
     } else {
 
-        let price = formatter.format(a * (1 / (c / m)));
+        let price = formatter.format(a * (m / c));
 
         let celebName = selectCeleb.options[selectCeleb.selectedIndex].text;
         let productName = selectProduct.options[selectProduct.selectedIndex].text;
 
-        document.querySelector('#finalPrice').innerText = `${celebName} buying a ${productName.toLowerCase()} is equivalent to you spending ${price}`;
+        if (sp.value !== '') {
+            if (sc.value !== '') {
+                document.querySelector('#finalPrice').innerText = `${celebName} buying a ${productName.toLowerCase()} is equivalent to you spending ${price}`;
+            } else {
+                celebName = 'Someone';
+                document.querySelector('#finalPrice').innerText = `${celebName} with an annual salary of ${formatter.format(c)} buying a ${productName.toLowerCase()} is equivalent to you spending ${price}`;
+            }
+        } else {
+            if (sc.value !== '') {
+                document.querySelector('#finalPrice').innerText = `${celebName} spending ${formatter.format(a)} is equivalent to you spending ${price}`;
+            } else {
+                celebName = 'Someone';
+                document.querySelector('#finalPrice').innerText = `${celebName} with an annual salary of ${formatter.format(c)} spending ${formatter.format(a)} is equivalent to you spending ${price}`;
+            }
+        }
+
     }
 }
