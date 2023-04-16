@@ -25,7 +25,7 @@
 
         <div class='flex justify-center items-center'>
             <p class='text-xl flex justify-center items-center mr-1'>$</p>
-            <input type='number' placeholder='Your annual salary' id='mySalary'
+            <input type='number' placeholder='Your annual income' id='myIncome'
                 class='input focus:bg-gray-200 text-center' min='0'>
         </div>
 
@@ -36,21 +36,24 @@
         <div class='grid grid-cols-2 gap-4 my-4 xl:px-80 lg:px-52'>
             <select id='selectCeleb' class='input text-right' onchange='changeCeleb()'>
                 <option value=''>Custom</option>
-                <optgroup label='Wages'>
-                    <option value='15000'>Minimum Wage American</option>
-                    <option value='98000'>Average Wage American</option>
-                    <option value='70000'>Median Wage American</option>
+                <optgroup label='World Incomes'>
+                    <option value='10000'>Average Global Income</option>
+                </optgroup>
+                <optgroup label='US Incomes'>
+                    <option value='15000'>Minimum Wage American (Individual)</option>
+                    <option value='70000'>Median American Income (Household)</option>
                 </optgroup>
                 <optgroup label='Celebrities'>
                     <option value='25000000'>Ariana Grande</option>
                     <option value='4000000000'>Bill Gates</option>
-                    <option value='75000000'>Billie Eilish</option>
+                    <option value='80000000'>Billie Eilish</option>
                     <option value='64500000'>Chris Hemsworth</option>
                     <option value='105000000'>Cristiano Ronaldo</option>
                     <option value='60000000'>Denzel Washington</option>
                     <option value='600000000'>Donald Trump</option>
                     <option value='49000000'>Drake</option>
                     <option value='27000000'>Dwayne Johnson</option>
+                    <option value='42000000'>Ed Sheeran</option>
                     <option value='84000000'>Ellen DeGeneres</option>
                     <option value='2400000000'>Elon Musk</option>
                     <option value='81000000'>Elton John</option>
@@ -62,6 +65,8 @@
                     <option value='60000000'>J.K. Rowling</option>
                     <option value='80000000'>Kate Hudson</option>
                     <option value='170000000'>Kanye West</option>
+                    <option value='38000000'>Lady Gaga</option>
+                    <option value='12000000000'>Larry Page</option>
                     <option value='7500000'>Lin-Manuel Miranda</option>
                     <option value='190000000'>Oprah Winfrey</option>
                     <option value='60000000'>Post Malone</option>
@@ -78,7 +83,7 @@
             </select>
             <div class='flex'>
                 <p class='text-xl flex justify-center items-center mr-1'>$</p>
-                <input type='number' placeholder="Someone else's annual salary" id='celebSalary'
+                <input type='number' placeholder="Someone else's annual income" id='celebIncome'
                     class='input w-full focus:bg-gray-200' min='0'>
             </div>
         </div>

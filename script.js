@@ -7,11 +7,11 @@ var formatter = new Intl.NumberFormat('en-US', {
 });
 
 function changeCeleb() {
-    document.querySelector('#celebSalary').value = sc.value;
+    document.querySelector('#celebIncome').value = sc.value;
     if (sc.value !== '') {
-        document.querySelector('#celebSalary').disabled = true;
+        document.querySelector('#celebIncome').disabled = true;
     } else {
-        document.querySelector('#celebSalary').disabled = false;
+        document.querySelector('#celebIncome').disabled = false;
     }
 }
 
@@ -26,12 +26,12 @@ function changeProduct() {
 }
 
 function calc() {
-    let m = document.querySelector('#mySalary').value;
-    let c = document.querySelector('#celebSalary').value;
+    let m = document.querySelector('#myIncome').value;
+    let c = document.querySelector('#celebIncome').value;
     let a = document.querySelector('#itemPrice').value;
 
     if ((m <= 0 || m == null) || (c <= 0 || c == null)) {
-        alert('Enter a salary above zero.');
+        alert('Enter a income above zero.');
     } else if (a <= 0 || a == null) {
         alert('Enter a price above zero.');
     } else {
@@ -46,14 +46,14 @@ function calc() {
                 document.querySelector('#finalPrice').innerText = `${celebName} buying a ${productName.toLowerCase()} is equivalent to you spending ${price}`;
             } else {
                 celebName = 'Someone';
-                document.querySelector('#finalPrice').innerText = `${celebName} with an annual salary of ${formatter.format(c)} buying a ${productName.toLowerCase()} is equivalent to you spending ${price}`;
+                document.querySelector('#finalPrice').innerText = `${celebName} with an annual income of ${formatter.format(c)} buying a ${productName.toLowerCase()} is equivalent to you spending ${price}`;
             }
         } else {
             if (sc.value !== '') {
                 document.querySelector('#finalPrice').innerText = `${celebName} spending ${formatter.format(a)} is equivalent to you spending ${price}`;
             } else {
                 celebName = 'Someone';
-                document.querySelector('#finalPrice').innerText = `${celebName} with an annual salary of ${formatter.format(c)} spending ${formatter.format(a)} is equivalent to you spending ${price}`;
+                document.querySelector('#finalPrice').innerText = `${celebName} with an annual income of ${formatter.format(c)} spending ${formatter.format(a)} is equivalent to you spending ${price}`;
             }
         }
 
